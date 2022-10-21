@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import {BrowserRouter as Router, Routes,Route} from 'react-router-dom'
 import Home from './pages/Home/Home.js'
-import Reports from './pages/Home/Reports.js'
+import Reports from './pages/Home/Overview.js'
 import Products from './pages/Home/Products.js'
 
 function App() {

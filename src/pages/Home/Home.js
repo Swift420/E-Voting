@@ -7,20 +7,20 @@ import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 import Products from './Products.js'
-import Reports from './Reports'
+import Overview from './Overview'
 import { Routes,Route} from 'react-router-dom'
 
 
 const Home = () => {
   const menus = [
-    { name: "dashboard", link: "/", icon: MdOutlineDashboard, lname: Home},
-    { name: "user", link: "/products", icon: AiOutlineUser , lname: Products},
-    { name: "messages", link: "/", icon: FiMessageSquare, lname: Products},
-    { name: "analytics", link: "/", icon: TbReportAnalytics,lname: Products, margin: true },
-    { name: "File Manager", link: "/", icon: FiFolder,lname: Products },
-    { name: "Cart", link: "/", icon: FiShoppingCart,lname: Products },
-    { name: "Saved", link: "/", icon: AiOutlineHeart, margin: true ,lname: Products},
-    { name: "Setting", link: "/", icon: RiSettings4Line,lname: Products },
+    { name: "Home", link: "/", icon: MdOutlineDashboard, lname: Home},
+    { name: "Candidates", link: "/products", icon: AiOutlineUser , lname: Products},
+    { name: "Chat", link: "/", icon: FiMessageSquare, lname: Products},
+    { name: "Vote", link: "/", icon: TbReportAnalytics,lname: Products},
+    { name: "Results", link: "/", icon: FiFolder,lname: Products },
+    // { name: "Results", link: "/", icon: FiShoppingCart,lname: Products },
+    // { name: "Saved", link: "/", icon: AiOutlineHeart, margin: true ,lname: Products},
+    { name: "Login", link: "/", icon: RiSettings4Line,lname: Products , margin: true },
   ];
   const [open, setOpen] = useState(true);
   return (
@@ -72,9 +72,9 @@ const Home = () => {
       </div>
       <div className="m-3 text-xl text-gray-900 font-semibold">
         <Routes>
-        <Route  path="/"  element={<Reports />} />
+        <Route  path="/"  element={<Overview />} />
         <Route  path="/products"  element={<Products />}/>
-        <Route  path="/reports" element={<Reports />}/>
+        <Route  path="/reports" element={<Overview />}/>
 
       </Routes>
       </div>
