@@ -11,6 +11,7 @@ import Overview from './Overview'
 import { Routes,Route} from 'react-router-dom'
 
 
+
 const Home = () => {
   const menus = [
     { name: "Home", link: "/", icon: MdOutlineDashboard, lname: Home},
@@ -65,7 +66,7 @@ const Home = () => {
                 {menu?.name}
               </h2>
 
-              {menu?.lname}
+              
             </NavLink>
           ))}
         </div>
