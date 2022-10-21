@@ -64,14 +64,15 @@ function HorizontalChart() {
         
         title: {
           display: true,
-          text: "SRC Presidential Race",
+          text: "Top 5 SRC Presidential Race Candidates",
+          
         },
       },
     });
   }, []);
 
   return (
-    <div style={{width: 900}} className='p-5'>
+    <div style={{width: 800}} className=''>
       <Bar options={chartOptions} data={chartData} />
     </div>
   );
