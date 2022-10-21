@@ -3,6 +3,8 @@ import HorizontalChart from '../../components/HorizontalChart/HorizontalChart'
 import {UserData} from '../../chartData'
 import {Chart as ChartJs} from 'chart.js/auto'
 import CountdownTimer from '../../components/CountDownTimer/CountdownTimer'
+import DoughnutChart from '../../components/DoughnutChart/DoughnutChart'
+
 
 const Overview = () => {
 
@@ -33,8 +35,13 @@ const Overview = () => {
       <div className='relative'>
 
         <div className='absolute right-1/2'>
-          <h1>SRC Races</h1>
+          <h1 className='py-5'>SRC Races</h1>
+
         </div>
+
+      </div>
+
+      <div >
 
       </div>
 
