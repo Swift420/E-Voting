@@ -10,16 +10,20 @@ import Products from './Products.js'
 import Overview from './Overview'
 import { Routes,Route} from 'react-router-dom'
 import Candidates from "./Candidates.js";
+import CandidateDetails from "../Details/CandidateDetail/CandidateDetails.js";
+import VoteCategory from "./VoteCategory.js";
+import CandidateScreen from "./CandidateScreen.js";
+import Report from "./Report.js";
 
 
 
 const Home = () => {
   const menus = [
-    { name: "Home", link: "/", icon: MdOutlineDashboard, lname: Home},
+    { name: "Overview", link: "/", icon: MdOutlineDashboard, lname: Home},
     { name: "Candidates", link: "/candidate", icon: AiOutlineUser , lname: Products},
     { name: "Chat", link: "/products", icon: FiMessageSquare, lname: Products},
-    { name: "Vote", link: "/", icon: TbReportAnalytics,lname: Products},
-    { name: "Results", link: "/", icon: FiFolder,lname: Products },
+    { name: "Vote", link: "/voteCategory", icon: TbReportAnalytics,lname: Products},
+    { name: "Results", link: "/report", icon: FiFolder,lname: Products },
     // { name: "Results", link: "/", icon: FiShoppingCart,lname: Products },
     // { name: "Saved", link: "/", icon: AiOutlineHeart, margin: true ,lname: Products},
     { name: "Login", link: "/", icon: RiSettings4Line,lname: Products , margin: true },
@@ -75,8 +79,11 @@ const Home = () => {
       <div className="m-3 text-xl text-gray-900 font-semibold">
         <Routes>
         <Route  path="/"  element={<Overview />} />
-        <Route  path="/products"  element={<Products />}/>
+        <Route  path="/voteCategory"  element={<VoteCategory/>}/>
         <Route  path="/candidate" element={<Candidates />}/>
+        <Route  path="/candidate/:id" element={<CandidateDetails />}/>
+        <Route  path="/voteCategory/:candidancy" element={<CandidateScreen/>}/>
+        <Route  path="/report" element={<Report/>}/>
 
       </Routes>
       </div>

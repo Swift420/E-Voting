@@ -2,7 +2,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function CandidateCard(props) {
+function VoteCandidateCard(props) {
   return (
     
 
@@ -20,7 +20,7 @@ function CandidateCard(props) {
     </div>
  
     <div className="m-2">
-    <Link role='button' to={`/candidate/${props.id}`}  className="text-white bg-sky-500 px-3 py-1 rounded-md hover:bg-purple-700">{props.acti}</Link>
+    <Link role='button' to={``}  className="text-white bg-sky-500 px-3 py-1 rounded-md hover:bg-purple-700">{props.acti}</Link>
     </div>
   </div>
 
@@ -28,5 +28,5 @@ function CandidateCard(props) {
   )
 }
 
-export default CandidateCard
+export default VoteCandidateCard
 
