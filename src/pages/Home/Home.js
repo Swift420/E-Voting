@@ -3,8 +3,9 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { MdOutlineDashboard } from "react-icons/md";
 import { RiSettings4Line } from "react-icons/ri";
 import { TbReportAnalytics } from "react-icons/tb";
-import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineUser, AiOutlineHeart, AiOutlineTeam } from "react-icons/ai";
 import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
+import {FaHubspot } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import Products from './Products.js'
 import Overview from './Overview'
@@ -20,13 +21,13 @@ import Report from "./Report.js";
 const Home = () => {
   const menus = [
     { name: "Overview", link: "/", icon: MdOutlineDashboard, lname: Home},
-    { name: "Candidates", link: "/candidate", icon: AiOutlineUser , lname: Products},
-    { name: "Chat", link: "/products", icon: FiMessageSquare, lname: Products},
+    { name: "Candidates", link: "/candidate", icon: AiOutlineTeam , lname: Products},
     { name: "Vote", link: "/voteCategory", icon: TbReportAnalytics,lname: Products},
+    { name: "Portfolio", link: "/products", icon: FaHubspot, lname: Products},
     { name: "Results", link: "/report", icon: FiFolder,lname: Products },
     // { name: "Results", link: "/", icon: FiShoppingCart,lname: Products },
     // { name: "Saved", link: "/", icon: AiOutlineHeart, margin: true ,lname: Products},
-    { name: "Login", link: "/", icon: RiSettings4Line,lname: Products , margin: true },
+    { name: "Login", link: "/", icon: AiOutlineUser,lname: Products , margin: true },
   ];
   const [open, setOpen] = useState(true);
   return (
