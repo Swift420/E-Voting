@@ -4,6 +4,7 @@ import {UserData} from '../../chartData'
 import {Chart as ChartJs} from 'chart.js/auto'
 import CountdownTimer from '../../components/CountDownTimer/CountdownTimer'
 import DoughnutChart from '../../components/DoughnutChart/DoughnutChart'
+import CandidateCard from '../../components/Card/CandidateCard'
 
 
 const Overview = () => {
@@ -17,7 +18,7 @@ const Overview = () => {
     }]
   });
   return (
-    <div >
+    < >
         <div className='container '>
       <div className='py-5 px-2'>
         <CountdownTimer
@@ -32,20 +33,22 @@ const Overview = () => {
       </div>
       </div>
 
-      <div className='relative'>
+      
 
-        <div className='absolute right-1/2'>
-          <h1 className='py-5'>SRC Races</h1>
-
-        </div>
-
+      <div className='py-10 px-10 flex flex-row'>
+          <DoughnutChart name={"Sports SRC"}/>
+          <DoughnutChart name={"Sports SRC"}/>
+          <DoughnutChart name={"Sports SRC"}/>
       </div>
-
-      <div >
-
+      <div className='py-10 px-10 flex flex-row'>
+          <DoughnutChart name={"Sports SRC"}/>
+          <DoughnutChart name={"Sports SRC"}/>
+          <DoughnutChart name={"Sports SRC"}/>
       </div>
+      
 
-    </div>
+
+    </>
   )
 }
 

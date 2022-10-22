@@ -22,7 +22,7 @@ ChartJS.register(
   Legend
 )
 
-function DoughnutChart({text}) {
+function DoughnutChart({name}) {
   const [chartData, setChartData] = useState({
     datasets: [],
   });
@@ -58,13 +58,13 @@ function DoughnutChart({text}) {
       ],
     });
     setChartOptions({
-        indexAxis: 'y',
+        
       responsive: true,
       plugins: {
         
         title: {
           display: true,
-          text: {text},
+          text: "SRC Sports",
           
         },
       },
@@ -72,8 +72,8 @@ function DoughnutChart({text}) {
   }, []);
 
   return (
-    <div  className='w-26'>
-      <Bar options={chartOptions} data={chartData} />
+    <div  style={{width: 350} }>
+      <Doughnut options={chartOptions} data={chartData} />
     </div>
   );
 }

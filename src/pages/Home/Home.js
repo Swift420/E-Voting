@@ -9,14 +9,15 @@ import { NavLink } from "react-router-dom";
 import Products from './Products.js'
 import Overview from './Overview'
 import { Routes,Route} from 'react-router-dom'
+import Candidates from "./Candidates.js";
 
 
 
 const Home = () => {
   const menus = [
     { name: "Home", link: "/", icon: MdOutlineDashboard, lname: Home},
-    { name: "Candidates", link: "/products", icon: AiOutlineUser , lname: Products},
-    { name: "Chat", link: "/", icon: FiMessageSquare, lname: Products},
+    { name: "Candidates", link: "/candidate", icon: AiOutlineUser , lname: Products},
+    { name: "Chat", link: "/products", icon: FiMessageSquare, lname: Products},
     { name: "Vote", link: "/", icon: TbReportAnalytics,lname: Products},
     { name: "Results", link: "/", icon: FiFolder,lname: Products },
     // { name: "Results", link: "/", icon: FiShoppingCart,lname: Products },
@@ -75,7 +76,7 @@ const Home = () => {
         <Routes>
         <Route  path="/"  element={<Overview />} />
         <Route  path="/products"  element={<Products />}/>
-        <Route  path="/reports" element={<Overview />}/>
+        <Route  path="/candidate" element={<Candidates />}/>
 
       </Routes>
       </div>
